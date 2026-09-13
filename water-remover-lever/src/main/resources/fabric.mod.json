@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "waterremover",
+  "version": "${version}",
+  "name": "Water Remover Lever",
+  "description": "Dźwignia usuwa wodę w promieniu kilku bloków po przełączeniu. Da się wyłączyć bindem (domyślnie R).",
+  "authors": ["Example"],
+  "contact": {},
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.example.waterremover.WaterRemoverMod"
+    ],
+    "client": [
+      "com.example.waterremover.client.WaterRemoverClient"
+    ]
+  },
+  "mixins": [],
+  "depends": {
+    "fabricloader": ">=0.16.9",
+    "minecraft": "~1.21.5",
+    "fabric-api": "*",
+    "java": ">=21"
+  }
+}
