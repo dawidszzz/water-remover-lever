@@ -19,11 +19,11 @@ jobs:
           java-version: '21'
 
       - name: Grant execute permission for gradlew
-        working-directory: water-remover-lever/water-remover-lever
+        working-directory: water-remover-lever
         run: chmod +x gradlew || true
 
       - name: Generate Gradle wrapper (if missing)
-        working-directory: water-remover-lever/water-remover-lever
+        working-directory: water-remover-lever
         run: |
           if [ ! -f "./gradlew" ]; then
             gradle wrapper --gradle-version 8.8
@@ -31,11 +31,11 @@ jobs:
           fi
 
       - name: Build with Gradle
-        working-directory: water-remover-lever/water-remover-lever
+        working-directory: water-remover-lever
         run: ./gradlew build 
 
       - name: Upload built jar
         uses: actions/upload-artifact@v4
         with:
           name: water-remover-lever-jar
-          path: water-remover-lever/water-remover-lever/build/libs/*.jar
+          path: water-remover-lever/build/libs/*.jar
